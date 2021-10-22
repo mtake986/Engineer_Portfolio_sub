@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masahiro Takechi Portfolio</title>
+  <!-- reset.css -->
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'> -->
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Russo -->
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <!-- Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous'>
+  <!-- css -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" id="theme-style">
+  <!-- <link rel="stylesheet" href="styles/orange-mode.css"> -->
+  <script src='script.js' defer></script>
+</head>
+<body>
+  <section class="s1" id="greeting-section">
+    <div class="main-container">
+      <div class="greeting-wrapper">
+        <h1>Hi, I'm Masahiro Takechi</h1>
+      </div>
+      <div class="intro-wrapper">
+        <div class="nav-wrapper">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+
+          <div id="navigation">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li>
+          </div>
+        </div> 
+        <div class="left-column">
+          <img id="profile_pic" src="imgs/Masa.jpg" alt="Masa's face">
+          <h5 style="text-align: center; margin-bottom:0;">Personalize Theme</h5>
+          <div id="theme-options-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
+            <!-- <a href="#" id="orange-mode-mode" class="theme-dot"></a>
+            <a href="#" id="blue-mode" class="theme-dot"></a> -->
+          </div>
+
+          <p id="settings-note">*Theme settings will be saved for <br>your next visit. </p>
+        </div>
+        <div class="right-column">
+          <div class="preview-shadow">
+            <div id="preview">
+              <div class="corner" id="corner-tl"></div>
+              <div class="corner" id="corner-tr"></div>
+              <h3>Who I Am</h3>
+              <p>Hi, there. I'm Masa from Japan, 21 years old, studying CS at BYU-Idaho, and a full stack developer.</p>
+              <div class="corner" id="corner-br"></div>
+              <div class="corner" id="corner-bl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="s2" id="about-me-section">
+    <div class="main-container">
+      <div class="about-wrapper">
+        <div class="about-me">
+          <h2>More about me</h2>
+          <p>I build a website or an app on the first day of every month. Building starts with brainstorming. </p><br>
+          <p>While I love creating things, I keep staying on top of my classes and getting A+ in all of the classes at BYU-Idaho. You should definitely check my grades in college out. </p>
+          <!-- <hr> -->
+          <h2>TOP EXPERTISE</h2>
+          <p class="sm-txt">A full stack developer with primary focus on Django + React: <a href="files/Resume_in_English.pdf" target="_blank">Resume<i class="fas fa-external-link-alt"></i></a></p>
+
+          <div class="skills">
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>React</li>
+              <li>JacaScript</li>
+              <li>Postgres</li>
+              <li>MySQL</li>
+            </ul>
+            <ul>
+              <li>HTML/CSS(Sass)</li>
+              <li>Tailwindcss</li>
+              <li>Algorithm</li>
+              <li>Heroku</li>
+              <li>JS Charts</li>
+              <li>Google Maps API</li>
+            </ul> 
+          </div>
+        </div>
+
+        <div class="about-right-col">
+          <h2>I learn how to code in 3 ways</h2>
+          <ul>
+            <!-- https://www.youtube.com/watch?v=VoUUlQHQRhI -->
+            <!-- A link above teaches u how to make read-more-less function-->
+            <li>- YouTube, Udemy</li>
+            <p>It's been a while since I started coding, but I still take advantage of YouTube and Udemy. I look for a nice course on YouTube and Udemy when I try to be familiar with a new language or framework or deepen my understanding of what I already learned.</p><br>
+            <li>- College classes</li>
+            <p>I love <strong>actual coding (building)</strong>, but I realized that majoring in CS brings me very basic but essential knowledge about computing such as what's going on in my computer, Logic Gates, and so on.</p><br>
+            <li>- Building a real app.</li>
+            <p>I don't only watch videos that teach me how to code, but I craft the projects on the videos. In my experience, when I am creating a real website or web app is when I get to know more about the languages and frameworks that I use for creating them. 
+            </p><br>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <section class="s1" id="works-section">
+    <div class="main-container">      
+      <h2 style="text-align: center;">Some of my past projects</h2>
+      <div class="post-wrapper">
+        <div class="post">
+          <img src="imgs/pfc-calc.png" class="thumbnail">
+          <div class="post-preview">
+            <h6 class="post-title">Calorie&PFC Calculator</h6>
+            <p>Made of: Python(Django), Postgres, HTML/CSS, Git(&Hub), DigitalOcean, Nginx, Gunicorn, etc.</p>
+            <a class="show-description">Show description</a>
+            <p class="post-intro">It calculates users total calorie and PFC balance of a day when they added a meal they ate. Users can also register "Favorites" to avoid typing the same meals over and over, set a target calorie and PFC balance, and write memos. 
+            </p>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="imgs/pfc-calc.png" class="thumbnail">
+          <div class="post-preview">
+            <h6 class="post-title">Calorie&PFC Calculator</h6>
+            <p>Made of: Python(Django), Postgres, HTML/CSS, Git(&Hub), DigitalOcean, Nginx, Gunicorn, etc.</p>
+            <a class="show-description">Show description</a>
+            <p class="post-intro">It calculates users' total calorie and PFC balance of a day when they added a meal they ate. Users can also register "Favorites" to avoid typing the same meals over and over, set a target calorie and PFC balance, and write memos. 
+            </p>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="imgs/pfc-calc.png" class="thumbnail">
+          <div class="post-preview">
+            <h6 class="post-title">Calorie&PFC Calculator</h6>
+            <p>Made of: Python(Django), Postgres, HTML/CSS, Git(&Hub), DigitalOcean, Nginx, Gunicorn, etc.</p>
+            <a class="show-description">Show description</a>
+            <p class="post-intro">It calculates users total calorie and PFC balance of a day when they added a meal they ate. Users can also register "Favorites" to avoid typing the same meals over and over, set a target calorie and PFC balance, and write memos. 
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s2" id="classes-section">
+    <div class="main-container">
+      <h2 class="sec-ttl">
+        Classes
+      </h2>
+    </div>
+  </section>
+
+  <section class="s1" id="skills-area">
+    <div class="main-container">
+      skills
+    </div>
+  </section>
+
+  <section class="s2" id="contact-section">
+    <div class="main-container">
+      <h2>Get In Touch</h2>
+      <form action="" id="contact-form">
+        <div class="input-name-wrapper field">
+          <label for='name' id="label-name">Name</label>
+          <input type="text" id="name" class="input-field" id="input-name" placeholder="Masa">
+        </div>
+
+        <div class="input-email-wrapper field">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="input-field" placeholder="masa@gmail.com">
+        </div>
+
+        <div class="input-message-wrapper field">
+          <label for='message'>Message</label>
+          <textarea id="message" class="input-field" placeholder="You are so dope!!"></textarea>
+        </div>
+
+        <input id="submit-btn" type="submit" value="Send">
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>@ Masahiro Takechi All Rights Reserved</p>
+  </footer>
+</body>
+</html>
+<!-- YouTubeとかTwitterのsocial linksをつけても良き -->

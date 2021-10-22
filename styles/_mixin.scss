@@ -1,0 +1,36 @@
+$sm: 425px;
+$md: 768px;
+$lg: 1024px;
+$lg-pc: 1200px;
+
+// @media screen and (max-width: $md) {
+//   body{
+//     margin: 0 auto;
+//     width: 95%;
+//   }
+// }
+@mixin mobile{
+  @media screen and (max-width: $sm){
+    @content;
+  }
+}
+@mixin tablet{
+  @media screen and (max-width: $md){
+    @content;
+  }
+}
+@mixin pc{
+  @media screen and (max-width: $lg){
+    @content;
+  }
+}
+@mixin lg-pc{
+  @media screen and (min-width: $lg-pc){
+    @content;
+  }
+}
+@mixin flexCenter($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}

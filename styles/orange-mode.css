@@ -1,0 +1,13 @@
+:root{
+  /* Color Picker */
+  --mainColor: #ffb326;
+  --secondaryColor: rgb(255, 171, 15);
+  --borderColor: #ff5d17;
+  --mainText: #4d4d4d;
+
+  --previewBgc: #fa9746cc;
+  --previewShadow: rgb(240, 240, 240);
+
+  --btnColor: white;
+  --linkColor: white;
+}
