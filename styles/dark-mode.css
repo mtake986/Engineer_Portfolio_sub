@@ -1,12 +1,12 @@
 :root{
   /* Color Picker */
-  --mainColor: #202020;
+  --mainColor: #181818;
   --secondaryColor: #101010;
   --borderColor: #c1c1c1;
-  --mainText: white;
+  --mainText: #f5f5f5;
 
-  --previewBgc: rgba(93, 93, 93, 0.8);
-  --previewShadow: #202020;
+  --previewBgc: rgba(40, 40, 40, 0.8);
+  --previewShadow: #181818;
 
   --btnColor: white;
   --linkColor: #56adff;

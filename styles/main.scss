@@ -74,7 +74,7 @@ p, li, span, label, input, textarea{
       'nav-wrapper nav-wrapper'
       'left-column right-column';
       @include tablet {
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
         grid-template-columns: 1fr;
         grid-template-areas: 
         'nav-wrapper'
@@ -186,22 +186,26 @@ p, li, span, label, input, textarea{
         }
         .preview-shadow{
           background: var(--previewShadow);
-          width: 400px;
-          height: 270px;
-          padding-left: 30px;
-          padding-top: 30px;
-          @include tablet{
-            // background: none;
-            padding-left: 0;
-            padding-top: 0;
-          }
+          width: 350px;
+          height: 200px;
+          padding-left: 50px;
+          padding-top: 50px;
           @include pc{
             width: 300px;
             height: 180px;
+            padding-left: 30px;
+            padding-top: 30px;
+          }
+          @include tablet{
+            // background: none;
+            width: 250px;
+            height: 200px;
+            padding-left: 0;
+            padding-top: 0;
           }
           #preview{
-            width: 400px;
-            height: 270px;
+            width: 350px;
+            height: 200px;
             border: 1.5px solid var(--linkColor);
             background-color: var(--previewBgc);
             padding: 15px;
@@ -211,15 +215,19 @@ p, li, span, label, input, textarea{
               height: 180px;
               margin: 0 auto;
             }
+            @include tablet{
+              width: 250px;
+              height: 200px;
+            }
             h3{
               margin: 15px 0;
-              font-size: 2.5rem;
+              font-size: 2rem;
               @include pc{
                 font-size: 28px;
               }
             }
             p{
-              font-size: 1.5rem;
+              font-size: 1.2rem;
               @include pc{
                 font-size: 1rem;
               }
@@ -316,9 +324,9 @@ p, li, span, label, input, textarea{
         width: 300px;
         margin: 0 auto;
         // border: 1px solid var(borderColor);
-        -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.75);
-        box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 2px 2px 5px 0px var(--mainText);
+        -moz-box-shadow: 2px 2px 5px 0px var(--mainText);
+        box-shadow: 2px 2px 5px 0px var(--mainText);
         .thumbnail{
           display: block;
           width: 100%;
