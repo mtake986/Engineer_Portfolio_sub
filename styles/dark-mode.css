@@ -1,7 +1,7 @@
 :root{
   /* Color Picker */
-  --mainColor: #181818;
-  --secondaryColor: #101010;
+  --mainBgColor: #181818;
+  --secondaryBgColor: #101010;
   --borderColor: #c1c1c1;
   --mainText: #f5f5f5;
 
