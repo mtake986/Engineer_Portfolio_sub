@@ -2,8 +2,8 @@
 @import './mixin';
 :root{
   /* Color Picker */
-  --secondaryColor: #fff;
-  --mainColor: #eaeaea;
+  --mainBgColor: #eaeaea;
+  --secondaryBgColor: #fff;
   --borderColor: #c1c1c1;
   --mainText: #333;
 
@@ -38,13 +38,22 @@ a{
 ul{
   list-style: none;
 }
-h1 {font-size: 56px;}
-h2 {font-size: 36px;}
-h3 {font-size: 28px;}
-h4 {font-size: 24px;}
-h5 {font-size: 20px;}
-h6 {font-size: 16px;}
 
+h1 {font-size: 4.5rem;}
+h2 {font-size: 4rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.2rem;}
+h6 {font-size: 1rem;}
+@include tablet{
+  h1 {font-size: 3rem;}
+  h2 {font-size: 2.5rem;}
+  h3 {font-size: 1.8rem;}
+  h4 {font-size: 1.5rem;}
+  h5 {font-size: 1.2rem;}
+  h6 {font-size: 1rem;}
+  p {font-size: .9rem;}
+}
 p, li, span, label, input, textarea{
   margin: 0;
   color: var(--mainText);
@@ -52,16 +61,18 @@ p, li, span, label, input, textarea{
 }
 
 .s1#greeting-section{
-  height: 100vh;
   .main-container{
     .greeting-wrapper {
-      display: grid;
-      text-align: center;
-      align-content: center;
-      min-height: 10em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      h1{
+        text-align: center;
+      }
     }
     .intro-wrapper {
-      background-color: var(--secondaryColor);
+      background-color: var(--secondaryBgColor);
       border: 1px solid var(--borderColor);
       border-radius: 5px 5px 0 0;
       -webkit-box-shadow: 1px 1px 3px -1px rgba(0,0,0,.75);
@@ -70,9 +81,11 @@ p, li, span, label, input, textarea{
       display: grid;
       grid-template-columns: 1fr 1fr;
       /* grid-template-rows: 3em 30em; */
-      grid-template-areas: 
+      grid-template-areas:
       'nav-wrapper nav-wrapper'
       'left-column right-column';
+      // max-width: 80%;
+      // margin: 0 auto;
       @include tablet {
         // padding-bottom: 50px;
         grid-template-columns: 1fr;
@@ -88,7 +101,7 @@ p, li, span, label, input, textarea{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--mainColor);
+        background-color: var(--mainBgColor);
         .dots-wrapper {
           display: flex;
           padding-left: 5px;
@@ -179,10 +192,13 @@ p, li, span, label, input, textarea{
         grid-area: right-column;
         display: grid;
         align-content: center;
-        justify-content: center;
+        // justify-content: center;
         @include tablet{
           justify-content: center;
           margin-bottom: 50px;
+        }
+        @include pc{
+          justify-content: center;
         }
         .preview-shadow{
           background: var(--previewShadow);
@@ -223,7 +239,7 @@ p, li, span, label, input, textarea{
               margin: 15px 0;
               font-size: 2rem;
               @include pc{
-                font-size: 28px;
+                font-size: 1.8rem;
               }
             }
             p{
@@ -262,66 +278,114 @@ p, li, span, label, input, textarea{
     }
   }
 }
-.s2#about-me-section{
-  .main-container{
-    .about-wrapper{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      column-gap: 5%;
-      @include tablet{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
-      .about-me{
-        p.sm-txt{
-          a{
-            // background: var(--mainText);
-            display: inline-block;
-            border-radius: 10px;
-            &:hover{
-              transform: translateY(-2px);
-            }
-            i{
-              margin-left: 5px;
-            }
-          }
-        }
-        .skills{
-          margin-top: 10px;
-          @include flexCenter(space-evenly, center);
-          background: var(--previewShadow);
-          ul{
-            padding: 0;
-          }
-        }
-      }
-      .about-right-col{
-        // background: rgb(255, 207, 207);
-        ul{
-          margin-bottom: 10px;
 
+.s2#about-section{
+  .main-container{
+    // max-width: 700px;
+    div.main-header{
+      h2{
+        text-align: center;
+      }
+    }
+    .main-body{
+      .i-love-wrapper{
+        margin: 0 auto;
+        .carousel-container{
+          width: 270px;
+          margin: auto;
+          // overflow: hidden;
+          border: 5px solid black;
+          .carousel-slide{
+            display: flex;
+            width: 100%;
+            height: 300px;
+            .img{
+              border: 5px solid red;
+            }
+          }
         }
-        @include mobile{
-          ul{
-            padding-left: 20px;
+        span{
+          font-size: 3rem;
+          display: block;
+          text-align: center;
+          font-weight: bold;
+          margin: 20px 0 10px;
+          @include tablet{
+            font-size: 1.8rem;
+          }
+        }
+        .long-msg{
+          margin: 30px auto 0;
+          p{
+            text-align: center;
+            line-height: 2;
+            font-size: 2rem;
+            @include tablet {
+              font-size: 1rem;
+            }
           }
         }
       }
     }
   }
+  // .main-container{
+  //   .about-wrapper{
+  //     display: grid;
+  //     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  //     column-gap: 5%;
+  //     @include tablet{
+  //       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  //     }
+  //     .about-me{
+  //       p.sm-txt{
+  //         a{
+  //           // background: var(--mainText);
+  //           display: inline-block;
+  //           border-radius: 10px;
+  //           &:hover{
+  //             transform: translateY(-2px);
+  //           }
+  //           i{
+  //             margin-left: 5px;
+  //           }
+  //         }
+  //       }
+  //       .skills{
+  //         margin-top: 10px;
+  //         @include flexCenter(space-evenly, center);
+  //         background: var(--previewShadow);
+  //         ul{
+  //           padding: 0;
+  //         }
+  //       }
+  //     }
+  //     .about-right-col{
+  //       // background: rgb(255, 207, 207);
+  //       ul{
+  //         margin-bottom: 10px;
+
+  //       }
+  //       @include mobile{
+  //         ul{
+  //           padding-left: 20px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 .s1#works-section{
-  padding-bottom: 50px;
   .main-container{
     .post-wrapper{
       display: grid;
-      grid-template-columns: repeat(auto-fit, 300px);
+      grid-template-columns: repeat(auto-fit, 280px);
       gap: 30px;
-      @include lg-pc{
-        gap: 75px;
-      }
+      // @include pc{
+      //   gap: 75px;
+      // }
       justify-content: center;
       .post{
-        width: 300px;
+        width: 280px;
         margin: 0 auto;
         // border: 1px solid var(borderColor);
         -webkit-box-shadow: 2px 2px 5px 0px var(--mainText);
@@ -335,7 +399,7 @@ p, li, span, label, input, textarea{
           border-bottom: 1px solid var(--borderColor);
         }
         .post-preview{
-          background: var(--mainColor);
+          background: var(--mainBgColor);
           padding: 15px;
           h6.post-title{
             color: var(--mainText);
@@ -362,7 +426,6 @@ p, li, span, label, input, textarea{
 
 // }
 .s2#contact-section{
-  border: none;
   .main-container{
     h2{
       text-align: center;
@@ -374,22 +437,40 @@ p, li, span, label, input, textarea{
       border: 1px solid var(--borderColor);
       padding: 15px;
       border-radius: 5px;
-      background: var(--mainColor);
+      background: var(--mainBgColor);
       margin-bottom: 50px;
-      .input-field{
-        // display: block;
-        width: 100%;
-        background: var(--secondaryColor);
-        border-radius: 5px;
-        border: 1px solid var(--borderColor);
-        // border: none;
-        font-size: 14px;
-        padding: 10px;
-        margin: 0 0 15px;
-      }
-      textarea{
-        min-height: 100px;
-        font-size: 14px;
+      div.field{
+        
+        label{
+          font-size: 1.5rem;
+          @include tablet{
+            font-size: 1.2rem;
+          }
+        }
+        .input-field{
+          // display: block;
+          width: 100%;
+          background: var(--secondaryBgColor);
+          border-radius: 5px;
+          border: 1px solid var(--borderColor);
+          // border: none;
+          font-size: 1.2rem;
+          padding: 15px;
+          margin: 0 0 15px;
+          @include tablet {
+            font-size: 1rem;
+            padding: 10px;
+          }
+        }
+        textarea{
+          min-height: 100px;
+          font-size: 1.2rem;
+          padding: 15px;
+          @include tablet {
+            font-size: 1rem;
+            padding: 10px;
+          }
+        }
       }
       input#submit-btn{
         margin-top: 10px;
@@ -399,50 +480,60 @@ p, li, span, label, input, textarea{
         background-color: var(--btnColor);
         border-radius: 5px;
         border: none;
-        box-shadow: 0px 2px 2px var(--mainColor);  
+        box-shadow: 0px 2px 2px var(--mainBgColor);  
         cursor: pointer;
-        color: var(--mainColor);
+        color: var(--mainBgColor);
       }
     }
   }
 }
-.main-container {
-  max-width: 95%;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-.s1 {
-  background-color: var(--mainColor);
-  border-bottom: 1px solid var(--mainColor);
-  overflow: auto;
-  padding-bottom: 50px;
-  border-bottom: 1px solid var(--borderColor);
-  @include tablet{
-    padding-bottom: 30px;
-  }
-}
-.s2{
-  background-color: var(--secondaryColor);
-  border-bottom: 1px solid var(--borderColor);
-  overflow: auto;
-  padding-bottom: 50px;
-  border-bottom: 1px solid var(--borderColor);
-  @include tablet{
-    padding-bottom: 30px;
-  }
-}
-.s2#about-me-section{
-  h2{
-    margin: 30px 0 8px;
-  }
-}
 
 footer{
-  background-color: var(--mainColor);
+  background-color: var(--mainBgColor);
   p{
     text-align: center;
     color: var(--mainText);
     padding: 10px 0;
     font-size: 12px;
+  }
+}
+
+.s1 {
+  background-color: var(--mainBgColor);
+  border-bottom: 1px solid var(--mainBgColor);
+  overflow: auto;
+  border-bottom: 1px solid var(--borderColor);
+}
+.s2{
+  background-color: var(--secondaryBgColor);
+  border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+// .s2#about-section{
+//   h2{
+//     margin: 30px 0 8px;
+//   }
+// }
+.s1, .s2{
+  
+}
+h2.sec-ttl{
+  text-align: center;
+  margin: 20px 0;
+}
+.main-container {
+  max-width: 70%;
+  margin: 100px auto;
+  @include tablet{
+    min-width: 85%;
+    margin: 50px auto;
+  }
+}
+.s1#greeting-section .main-container{
+  margin: 0 auto 100px;
+  @include tablet{
+    margin-bottom: 50px;
   }
 }

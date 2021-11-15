@@ -20,13 +20,17 @@
   <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" id="theme-style">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- slider -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
+
   <script src='script.js' defer></script>
 </head>
 <body>
   <section class="s1" id="greeting-section">
     <div class="main-container">
       <div class="greeting-wrapper">
-        <h1>Hi, I'm Masahiro Takechi</h1>
+        <h1>Thanks for visiting!!</h1>
       </div>
       <div class="intro-wrapper">
         <div class="nav-wrapper">
@@ -69,14 +73,21 @@
     </div>
   </section> 
 
-  <section class="s2" id="about-me-section">
+  <section class="s2" id="about-section">
     <div class="main-container">
-      <div class="about-wrapper">
-        <div class="about-me">
-          <h2>More about me</h2>
+      <h2 class="sec-ttl">About</h2>
+      <!-- <div class="about-wrapper">
+        <div class="about-me"> -->
+      <div class="main-body">
+        <div class="i-love-wrapper">
+          <span>I LOVE ...</span>
+          <div class="long-msg">
+            <p>I believe working in a multi-disciplined approach brings creative inspiration to my work and life. I am passionate about creating websites and web apps that incorporate interactive design and modern technologies. I specialize in back-end development but also love experimenting with new front-end technologies, with the aim to skyrocket speed, productivity, performance, and quality.</p>
+          </div>
+        </div>
+          <!-- <h2>More about me</h2>
           <p>I build a website or an app on the first day of every month. Building starts with brainstorming. </p><br>
           <p>While I love creating things, I keep staying on top of my classes and getting A+ in all of the classes at BYU-Idaho. You should definitely check my grades in college out. </p>
-          <!-- <hr> -->
           <h2>TOP EXPERTISE</h2>
           <p class="sm-txt">A full stack developer with primary focus on Django + React: <a href="files/Resume_in_English.pdf" target="_blank">Resume<i class="fas fa-external-link-alt"></i></a></p>
 
@@ -101,8 +112,6 @@
         <div class="about-right-col">
           <h2>I learn how to code in 3 ways</h2>
           <ul>
-            <!-- https://www.youtube.com/watch?v=VoUUlQHQRhI -->
-            <!-- A link above teaches u how to make read-more-less function-->
             <li>- YouTube, Udemy</li>
             <p>It's been a while since I started coding, but I still take advantage of YouTube and Udemy. I look for a nice course on YouTube and Udemy when I try to be familiar with a new language or framework or deepen my understanding of what I already learned.</p><br>
             <li>- College classes</li>
@@ -111,13 +120,13 @@
             <p>I don't only watch videos that teach me how to code, but I craft the projects on the videos. In my experience, when I am creating a real website or web app is when I get to know more about the languages and frameworks that I use for creating them. 
             </p><br>
           </ul>
-        </div>
-      </div>
+        </div> -->
+    </div>
   </section>
 
   <section class="s1" id="works-section">
     <div class="main-container">      
-      <h2 style="text-align: center;">Some of my past projects</h2>
+      <h2 class="sec-ttl">Works</h2>
       <div class="post-wrapper">
         <div class="post">
           <img src="imgs/pfc-calc.png" class="thumbnail">
@@ -158,21 +167,21 @@
 
   <section class="s2" id="classes-section">
     <div class="main-container">
-      <h2 class="sec-ttl">
-        Classes
-      </h2>
+      <h2 class="sec-ttl">Classes</h2>
     </div>
   </section>
 
   <section class="s1" id="skills-area">
     <div class="main-container">
-      skills
+      <h2 class="sec-ttl">Skills</h2>
     </div>
   </section>
 
   <section class="s2" id="contact-section">
     <div class="main-container">
-      <h2>Get In Touch</h2>
+      <h2 class="sec-ttl">
+        Contact
+      </h2>
       <form action="" id="contact-form">
         <div class="input-name-wrapper field">
           <label for='name' id="label-name">Name</label>
@@ -196,6 +205,8 @@
   <footer>
     <p>@ Masahiro Takechi All Rights Reserved</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 </body>
 </html>
 <!-- YouTubeとかTwitterのsocial linksをつけても良き -->
