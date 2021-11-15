@@ -26,23 +26,9 @@ function setTheme(mode){
   localStorage.setItem('theme', mode)
 }
 
+function showDescription(){
+  const showD = document.querySelector('.show-description')
+  showD.classList.toggle('active')
+}
 
-
-carouselModule.configure()
-let width = 256
-const carouselSlide = document.querySelector('.carousel-slide');
-let carouselImages = document.querySelectorAll('.carousel-slide img');
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-console.log(size)
-carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-
-nextBtn.addEventListener('click', ()=>{
-  carouselSlide.style.transition = 'transform .4s ease-in-out';
-  counter ++;
-  console.log(counter)
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-})
 

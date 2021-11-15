@@ -62,6 +62,11 @@ p, li, span, label, input, textarea{
 
 .s1#greeting-section{
   .main-container{
+    margin: 0 auto 100px;
+    max-width: 95%;
+    @include tablet{
+      margin-bottom: 50px;
+    }
     .greeting-wrapper {
       display: flex;
       align-items: center;
@@ -193,13 +198,16 @@ p, li, span, label, input, textarea{
         display: grid;
         align-content: center;
         // justify-content: center;
+        padding-right: 50px;
+        padding-bottom: 50px;
         @include tablet{
           justify-content: center;
           margin-bottom: 50px;
+          padding: 0;
         }
-        @include pc{
-          justify-content: center;
-        }
+        // @include pc{
+        //   justify-content: center;
+        // }
         .preview-shadow{
           background: var(--previewShadow);
           width: 350px;
@@ -401,18 +409,27 @@ p, li, span, label, input, textarea{
         .post-preview{
           background: var(--mainBgColor);
           padding: 15px;
-          h6.post-title{
+          h5.post-title{
             color: var(--mainText);
             margin: 0 0 10px;
           }
-          a.show-description{
-            display: inline-block;
-            margin-top: 10px;
-            cursor: pointer;
+          .check-it-out-wrapper{
+            margin: 20px 0 5px;
+            i{
+              color: var(--mainText);
+              width: 20px;
+              text-align: center;
+              margin-right: 5px;
+            }
           }
-          p.post-intro{
-            color: var(--mainText);
-            font-style: 0.9em;
+          .source-code-wrapper{
+            i{
+              color: var(--mainText);
+              width: 20px;
+              font-size: 1.2rem;
+              text-align: center;
+              margin-right: 5px;
+            }
           }
         }
       }
@@ -498,6 +515,7 @@ footer{
   }
 }
 
+// In general
 .s1 {
   background-color: var(--mainBgColor);
   border-bottom: 1px solid var(--mainBgColor);
@@ -511,29 +529,25 @@ footer{
   border-bottom: 1px solid var(--borderColor);
 }
 
-// .s2#about-section{
-//   h2{
-//     margin: 30px 0 8px;
-//   }
-// }
-.s1, .s2{
+// .s1, .s2{
   
-}
+// }
 h2.sec-ttl{
   text-align: center;
   margin: 20px 0;
 }
 .main-container {
-  max-width: 70%;
+  max-width: 85%;
   margin: 100px auto;
   @include tablet{
-    min-width: 85%;
+    max-width: 95%;
     margin: 50px auto;
   }
 }
-.s1#greeting-section .main-container{
-  margin: 0 auto 100px;
+.s1#greeting-section .main-container .intro-wrapper .right-column{
+  padding-right: 50px;
+  padding-bottom: 50px;
   @include tablet{
-    margin-bottom: 50px;
+    padding: 0;
   }
 }
