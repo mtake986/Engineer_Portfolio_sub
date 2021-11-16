@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
   /* Color Picker */
-  --mainBgColor: #eaeaea;
+  --mainBgColor: #f0f0f0;
   --secondaryBgColor: #fff;
   --borderColor: #c1c1c1;
   --mainText: #333;
@@ -465,13 +465,83 @@ p, li, span, label, input, textarea {
   box-shadow: 2px 2px 5px 0px var(--mainText);
 }
 
-.s1#works-section .main-container .post-wrapper .post .thumbnail {
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper {
+  position: relative;
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .thumbnail {
   display: block;
   width: 100%;
-  height: 180px;
+  height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
   border-bottom: 1px solid var(--borderColor);
+  cursor: pointer;
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper {
+  z-index: 10;
+  height: 160px;
+  position: absolute;
+  padding-top: 20px;
+  top: 0px;
+  margin: 0 auto;
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  display: none;
+  color: var(--mainText);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper i {
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper h3 {
+  margin: 0 0 0;
+  text-align: center;
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper ul {
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .modalCover {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffffb3;
+  z-index: 5;
 }
 
 .s1#works-section .main-container .post-wrapper .post .post-preview {

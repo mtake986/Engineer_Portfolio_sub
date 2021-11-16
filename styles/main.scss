@@ -2,7 +2,7 @@
 @import './mixin';
 :root{
   /* Color Picker */
-  --mainBgColor: #eaeaea;
+  --mainBgColor: #f0f0f0;
   --secondaryBgColor: #fff;
   --borderColor: #c1c1c1;
   --mainText: #333;
@@ -399,12 +399,59 @@ p, li, span, label, input, textarea{
         -webkit-box-shadow: 2px 2px 5px 0px var(--mainText);
         -moz-box-shadow: 2px 2px 5px 0px var(--mainText);
         box-shadow: 2px 2px 5px 0px var(--mainText);
-        .thumbnail{
-          display: block;
-          width: 100%;
-          height: 180px;
-          object-fit: cover;
-          border-bottom: 1px solid var(--borderColor);
+        .thum-wrapper{
+          position: relative;
+          .thumbnail{
+            display: block;
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--borderColor);
+            cursor: pointer;
+          }
+          .modal-wrapper{
+            z-index: 10;
+            height: 160px;
+            position: absolute;
+            padding-top: 20px;
+            top: 0px;
+            margin: 0 auto;
+            animation-name: modalopen;
+            animation-duration: .5s;
+            display: none;
+            color: var(--mainText);
+            transition: .5s;
+            @keyframes modalopen {
+              from {opacity: 0}
+              to {opacity: 1}
+            }
+            i{
+              font-size: 2rem;
+              position: absolute;
+              left: 10px;
+              top: 10px;
+              cursor: pointer;
+              z-index: 20;
+            }
+            h3{
+              margin: 0 0 0;
+              text-align: center;
+            }
+            ul{
+              margin-top: 0;
+              padding: 0 20px;
+            }
+          }
+          .modalCover{
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #ffffffb3;
+            z-index: 5;
+          }
         }
         .post-preview{
           background: var(--mainBgColor);
