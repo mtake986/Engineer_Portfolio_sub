@@ -491,7 +491,7 @@ p, li, span, label, input, textarea {
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
   display: none;
-  color: var(--mainText);
+  color: #333;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -526,11 +526,16 @@ p, li, span, label, input, textarea {
 .s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper h3 {
   margin: 0 0 0;
   text-align: center;
+  color: #333;
 }
 
 .s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper ul {
   margin-top: 0;
   padding: 0 20px;
+}
+
+.s1#works-section .main-container .post-wrapper .post .thum-wrapper .modal-wrapper ul p {
+  color: #333;
 }
 
 .s1#works-section .main-container .post-wrapper .post .thum-wrapper .modalCover {

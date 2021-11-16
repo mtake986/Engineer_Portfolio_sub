@@ -419,7 +419,7 @@ p, li, span, label, input, textarea{
             animation-name: modalopen;
             animation-duration: .5s;
             display: none;
-            color: var(--mainText);
+            color: #333;
             transition: .5s;
             @keyframes modalopen {
               from {opacity: 0}
@@ -436,10 +436,14 @@ p, li, span, label, input, textarea{
             h3{
               margin: 0 0 0;
               text-align: center;
+              color: #333;
             }
             ul{
               margin-top: 0;
               padding: 0 20px;
+              p{
+                color: #333;
+              }
             }
           }
           .modalCover{
